@@ -200,12 +200,10 @@ p {
     /* Responsive font size */
 }
 
-.highlight {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    /* Responsive highlight size */
-    font-weight: bold;
-    color: #0055ff;
-    /* Adjust to your exact blue */
+.outterhighlight {
+    font-size: 2.5rem;
+    color: var(--darkblue);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .logos-container {
@@ -310,7 +308,7 @@ p {
 }
 
 .highlight-inner {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* font-size: clamp(1.5rem, 4vw, 2.5rem); */
     /* Responsive highlight size */
     font-weight: bold;
     color: var(--yellowcolor);
@@ -460,3 +458,161 @@ p {
 }
 
 /* Why Us Section */
+
+/* Reset and general styles */
+
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 2rem;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Image Section */
+.image-section {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    /* Maintain aspect ratio (adjust based on image) */
+    /* background-color: #e0e7ff; */
+    /* Placeholder background */
+    overflow: hidden;
+}
+
+.phone-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensures the image fits without distortion */
+}
+
+/* Content Section */
+.content-section {
+    padding: 1rem;
+    text-align: left;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #3b82f6;
+    /* Blue highlight */
+    font-size: 1.5rem;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* Single column on medium screens */
+    }
+
+    .image-section {
+        padding-top: 75%;
+        /* Adjust aspect ratio for medium screens */
+    }
+
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    .highlight {
+        font-size: 1.25rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        padding-top: 50%;
+        /* Adjust aspect ratio for smaller screens */
+    }
+
+    .content-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .highlight {
+        font-size: 1rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-image {
+        width: 100%;
+        /* height: 100%; */
+        object-position: left;
+        object-fit: contain;
+
+    }
+
+    .image-section {
+        /* padding-top: 40%; */
+        /* Adjust aspect ratio for mobile */
+        min-height: 300px;
+        margin-top: -100px;
+        order: 2;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .outterhighlight {
+        font-size: 1.5rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.85rem;
+    }
+}
