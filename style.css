@@ -5,6 +5,14 @@ body {
 }
 
 
+:root {
+    --yellowcolor: #FFC65F;
+    --orangecolor: #D88A00;
+    --darkblue: #0314BF;
+    --lightblue: #006FFF;
+}
+
+
 body {
     font-family: 'Geist', sans-serif;
     margin: 0;
@@ -129,6 +137,7 @@ p {
     background: #fff;
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
 .demo-btn {
@@ -187,7 +196,7 @@ p {
     /* Responsive font size */
 }
 
-.text .highlight {
+.highlight {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     /* Responsive highlight size */
     font-weight: bold;
@@ -271,4 +280,167 @@ p {
     }
 
 
+}
+
+
+/* Solution Section */
+
+.solution-section {
+    justify-self: center;
+    background-color: var(--darkblue);
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    min-height: 600px;
+}
+
+.inner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #D88A00;
+}
+
+.highlight-inner {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* Responsive highlight size */
+    font-weight: bold;
+    color: var(--yellowcolor);
+    /* Adjust to your exact blue */
+}
+
+.text-button {
+    padding: 6px 8px;
+    border-radius: 33px;
+    border: 0px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    color: var(--lightblue);
+    /* cursor: pointer; */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns by default */
+    gap: 1.5rem;
+    /* Space between cards */
+    padding: 1rem;
+    max-width: 1200px;
+    /* Optional: limits the grid width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* Override previous margins */
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    width: 100%;
+    /* Full width within grid cell */
+    max-width: 100%;
+    border-top: 8px solid var(--yellowcolor);
+    overflow: hidden;
+
+
+}
+
+.card-content {
+    padding: 1rem;
+
+}
+
+.card-content h5 {
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    color: #64748b;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.card-button {
+    background: linear-gradient(135deg, #FFC65F, #D88A00);
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-button:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: #1e293b;
+}
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on medium screens */
+    }
+
+    .card-content h5 {
+        font-size: 1.125rem;
+        /* 18px */
+    }
+
+    .card-content p {
+        font-size: 0.9375rem;
+        /* 15px */
+    }
+
+    .card-button {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8125rem;
+        /* 13px */
+    }
+}
+
+@media (max-width: 640px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        /* 1 column on small screens */
+    }
+
+    .card-content {
+        padding: 0.75rem;
+    }
+
+    .card-content h5 {
+        font-size: 1rem;
+        /* 16px */
+    }
+
+    .card-content p {
+        font-size: 0.875rem;
+        /* 14px */
+    }
+
+    .card-button {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
+        /* 12px */
+        margin-top: 1rem;
+    }
 }
