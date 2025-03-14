@@ -173,6 +173,10 @@ p {
         display: none;
     }
 
+    .navbar {
+        width: 100%;
+    }
+
 }
 
 /* Trusted Section */
@@ -419,6 +423,15 @@ p {
 }
 
 @media (max-width: 640px) {
+
+    #gradient-img {
+
+        width: 100%;
+
+        display: none;
+
+    }
+
     .card-grid {
         grid-template-columns: 1fr;
         /* 1 column on small screens */
