@@ -447,31 +447,3 @@ p {
 }
 
 /* Why Us Section */
-
-.inner-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
-}
-
-.innermost-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
-}
-
-@media (max-width:480px) {
-
-    .inner-grid {
-
-        grid-template-columns: 1fr;
-        grid-auto-flow: row-reverse;
-    }
-
-    .innermost-grid {
-        grid-template-columns: 1fr;
-
-    }
-}
