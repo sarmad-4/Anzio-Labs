@@ -302,7 +302,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* background-color: #D88A00; */
+    background-color: #D88A00;
 }
 
 .highlight-inner {
