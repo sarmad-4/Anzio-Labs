@@ -302,7 +302,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #D88A00;
+    /* background-color: #D88A00; */
 }
 
 .highlight-inner {
@@ -314,6 +314,7 @@ p {
 }
 
 .text-button {
+    background-color: white;
     padding: 6px 8px;
     border-radius: 33px;
     border: 0px;
@@ -442,5 +443,35 @@ p {
         font-size: 0.75rem;
         /* 12px */
         margin-top: 1rem;
+    }
+}
+
+/* Why Us Section */
+
+.inner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.innermost-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+@media (max-width:480px) {
+
+    .inner-grid {
+
+        grid-template-columns: 1fr;
+        grid-auto-flow: row-reverse;
+    }
+
+    .innermost-grid {
+        grid-template-columns: 1fr;
+
     }
 }
