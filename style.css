@@ -286,6 +286,12 @@ p {
     min-height: 600px;
 }
 
+#gradient-img {
+    position: absolute;
+    margin-left: -40%;
+    margin-top: -30%;
+}
+
 .inner-section {
     display: flex;
     flex-direction: column;
@@ -294,10 +300,16 @@ p {
     /* background-color: #D88A00; */
 }
 
+#sol-h2 {
+    text-align: center;
+    color: white;
+
+}
+
 .highlight-inner {
     /* font-size: clamp(1.5rem, 4vw, 2.5rem); */
     /* Responsive highlight size */
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--yellowcolor);
     /* Adjust to your exact blue */
 }
@@ -434,7 +446,7 @@ p {
 
         width: 100%;
 
-        display: none;
+
 
     }
 
@@ -475,6 +487,15 @@ p {
         font-size: 18px;
 
         text-align: center;
+    }
+
+    #gradient-img {
+        margin-top: -60%;
+        margin-left: -40%;
+    }
+
+    #sol-h2 {
+        font-size: 30px;
     }
 }
 
@@ -684,4 +705,100 @@ p {
     .left-img {
         order: 2;
     }
+}
+
+
+/* How it works */
+
+.container-how {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: #d6d6d6;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.grid-how {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+
+}
+
+.how-card {
+    height: auto;
+    background-color: var(--darkblack);
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 15px 5px rgba(255, 255, 255, 0.616);
+}
+
+.how-card h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.how-card p {
+    line-height: 30px;
+    color: white;
+    width: 90%;
+}
+
+.how-p {
+    color: black;
+    text-align: center;
+    width: 70%;
+    line-height: 30px;
+    justify-self: center;
+}
+
+.how-btn {
+    background: linear-gradient(135deg, #FFC65F, #D88A00);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width:480px) {
+
+    .grid-how {
+        grid-template-columns: 1fr;
+    }
+
+    .how-card {
+        width: 85%;
+    }
+
+    .container-how {
+
+        justify-content: left;
+        align-items: start;
+    }
+
+    .how-p {
+        justify-self: left;
+        width: 100%;
+        text-align: left;
+    }
+
+    .how-btn {
+        margin-left: 35%;
+        width: 100%;
+    }
+
+
 }
