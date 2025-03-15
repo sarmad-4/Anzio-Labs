@@ -10,6 +10,7 @@ body {
     --orangecolor: #D88A00;
     --darkblue: #0314BF;
     --lightblue: #006FFF;
+    --darkblack: #001126;
 }
 
 
@@ -276,7 +277,7 @@ p {
 .solution-section {
     justify-self: center;
     background-color: var(--darkblue);
-    width: 90%;
+    width: 75%;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -461,7 +462,7 @@ p {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
     overflow: hidden;
@@ -500,7 +501,11 @@ p {
 
 /* Content Section */
 .content-section {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+
     text-align: left;
 }
 
