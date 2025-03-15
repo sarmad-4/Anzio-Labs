@@ -302,6 +302,14 @@ p {
     /* Adjust to your exact blue */
 }
 
+#sol-p {
+    color: white;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+
+}
+
 .text-button {
     background-color: white;
     padding: 6px 8px;
@@ -396,6 +404,8 @@ p {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+
+
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
         /* 2 columns on medium screens */
@@ -452,6 +462,19 @@ p {
         font-size: 0.75rem;
         /* 12px */
         margin-top: 1rem;
+    }
+}
+
+@media (max-width:480px) {
+
+    #sol-p {
+        width: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        font-size: 18px;
+
+        text-align: center;
     }
 }
 
@@ -639,4 +662,26 @@ p {
     /* padding-top: 100%; */
     padding: 80px 10px;
     overflow: hidden;
+
+}
+
+.knowledge-logo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.knowledge-logo img {
+    margin-top: 5%;
+    width: 80%;
+    align-self: center;
+
+}
+
+@media (max-width:480px) {
+
+    .left-img {
+        order: 2;
+    }
 }
