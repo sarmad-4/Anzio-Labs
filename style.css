@@ -719,7 +719,7 @@ p {
     margin: 0 auto;
     padding: 2rem;
     overflow: hidden;
-    background-color: #d6d6d6;
+    /* background-color: #d6d6d6; */
     margin-top: 5%;
     margin-bottom: 3%;
 }
