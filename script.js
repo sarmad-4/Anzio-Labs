@@ -1,3 +1,26 @@
+// New Navbar Js
+
+// Select elements
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+// Toggle mobile menu
+navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+const navLinks = document.querySelectorAll('.anzio-nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+    });
+});
+
+
 // // Select all accordion buttons
 const buttons = document.querySelectorAll('.anzio-accordion-button');
 
