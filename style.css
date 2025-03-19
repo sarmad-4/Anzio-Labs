@@ -734,21 +734,26 @@ p {
 
 .how-card {
     height: auto;
-    background-color: var(--darkblack);
+    background-color: #ffffff;
     width: 90%;
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: inset 0px 0px 15px 5px rgba(255, 255, 255, 0.616);
+    box-shadow: 4px 4px 2px #bbbbbb;
+}
+
+.how-card img {
+    width: 15%;
 }
 
 .how-card h2 {
     font-size: 28px;
-    color: white;
+    color: rgb(0, 0, 0);
+    text-shadow: none;
 }
 
 .how-card p {
     line-height: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 90%;
 }
 
